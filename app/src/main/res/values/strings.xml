@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">notes</string>
+    <string name="api_url">https://api.openuv.io/api/v1/uv</string>
+
+    <string name="error_message">ocurrió un error</string>
+    <string name="description">icono</string>
+
+    <string name="favorites">Favorites</string>
+    <string name="notes">Notes</string>
+    <string name="recently_deleted">Recently deleted</string>
+</resources>
