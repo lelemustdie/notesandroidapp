@@ -10,11 +10,12 @@ import com.example.notes.ui.theme.SecondaryPink
 
 @Composable
 fun SmallFloatingButton(onClick: () -> Unit) {
-    SmallFloatingActionButton(
-        onClick = { onClick() },
-        containerColor = SecondaryPink,
-        contentColor = PrimaryPink
-    ) {
-        Icon(Icons.Filled.Add, "Small floating action button.")
-    }
+        SmallFloatingActionButton(
+            onClick = { onClick() },
+            containerColor = SecondaryPink,
+            contentColor = PrimaryPink
+        ) {
+            Icon(Icons.Filled.Add, "Small floating action button.")
+        }
+
 }

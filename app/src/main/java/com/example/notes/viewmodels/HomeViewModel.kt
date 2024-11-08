@@ -2,6 +2,7 @@ package com.example.notes.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
 import com.example.notes.data.Note
 import com.example.notes.data.NotesDatabase
@@ -28,7 +29,7 @@ class HomeViewModel @Inject constructor(
     val loading: StateFlow<Boolean> = _loading
 
     private val _notes = notesConnectDatabase.noteDao().getNotes()
-    val notes = _notes
+    val notes = _notes.asFlow()
 
     private val _showRetry = MutableStateFlow(false)
     val showRetry: StateFlow<Boolean> = _showRetry
@@ -60,7 +61,7 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             _loading.value = true
             try {
-                notesConnectDatabase.noteDao().deleteNote(note)
+                notesConnectDatabase.noteDao().deleteNote(note.noteId)
                 _showRetry.value = false
             } catch (e: Exception) {
                 _showRetry.value = true

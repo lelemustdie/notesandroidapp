@@ -1,4 +1,5 @@
 package com.example.notes.navigation
+
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -16,7 +17,7 @@ import com.example.notes.ui.theme.PrimaryPink
 @Composable
 fun TabsView(tabs: List<TabItem>, onNavigate: (String) -> Unit) {
     var selectedTabIndex by rememberSaveable {
-        mutableIntStateOf(0)
+        mutableIntStateOf(1)
     }
 
     NavigationBar {

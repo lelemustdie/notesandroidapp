@@ -1,5 +1,5 @@
 package com.example.notes.ui.components
-import androidx.compose.material.*
+
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.Check
@@ -25,7 +25,7 @@ fun TopBar(
     isFavorite: Boolean
 ) {
     TopAppBar(
-        title = { Text(text = "Nota") },
+        title = { Text(stringResource(id = R.string.note)) },
         navigationIcon = {
             IconButton(onClick = onBack) {
                 Icon(

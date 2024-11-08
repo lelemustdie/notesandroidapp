@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="api_key">enSGTo74RTzOHPgcb5Q4WCvab7z9x6Ls</string>
-    <string name="access_token">openuv-16kb8grm1od4ckt-io</string>
+    <string name="api_key" translatable="false">enSGTo74RTzOHPgcb5Q4WCvab7z9x6Ls</string>
+    <string name="access_token" translatable="false">openuv-16kb8grm1od4ckt-io</string>
 </resources>

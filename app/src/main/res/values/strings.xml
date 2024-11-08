@@ -1,11 +1,21 @@
 <resources>
     <string name="app_name">notes</string>
-    <string name="api_url">https://api.openuv.io/api/v1/uv</string>
-
     <string name="error_message">ocurrió un error</string>
     <string name="description">icono</string>
-
     <string name="favorites">Favorites</string>
     <string name="notes">Notes</string>
+    <string name="note">Nota</string>
+    <string name="content">Contenido</string>
     <string name="recently_deleted">Recently deleted</string>
+    <string name="delete_note">Eliminar nota</string>
+    <string name="mark_favorite">Marcar como favorito</string>
+    <string name="unmark_favorite">Desmarcar como favorito</string>
+    <string name="save_note">Guardar nota</string>
+    <string name="note_title">Título</string>
+    <string name="uv_index">Máximo índice UV hoy</string>
+    <string name="na">N/A</string>
+    <string name="maxuvindex">Índice Máximo de UV: %s</string>
+    <string name="maxuvtime">Horario de Máximo índice UV: %s</string>
+    <string name="nofavs">Aún no tienes notas favoritas.</string>
+    <string name="nodeleted"></string>
 </resources>

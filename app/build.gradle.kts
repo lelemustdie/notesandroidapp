@@ -76,6 +76,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter)
     implementation(libs.coil)
+    kapt(libs.hilt.android.compiler.v249)
+    implementation(libs.androidx.biometric)
 
     kapt(libs.hilt.compiler)
     kapt(libs.androidx.room.compiler)

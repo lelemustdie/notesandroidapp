@@ -9,5 +9,6 @@ data class Note(
     @PrimaryKey(autoGenerate = true) val noteId: Int = 0,
     val title: String,
     val body: String,
-    val isFavorite: Boolean
+    val isFavorite: Boolean,
+    val deleted: Boolean = false
 )
