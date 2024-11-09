@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.notes.R
 import com.example.notes.data.Note
+import com.example.notes.ui.theme.Grey80
 import com.example.notes.ui.theme.SecondaryPink
 import com.example.notes.ui.theme.eightDp
 import com.example.notes.ui.theme.oneF
@@ -38,7 +39,9 @@ fun RecentlyDeleted(recentlyDeletedViewModel: RecentlyDeletedViewModel = hiltVie
     } else {
         LazyColumn(modifier = Modifier.fillMaxSize().padding(sixteenDp)) {
             items(recentlyDeletedNotes) { note ->
-                NoteCardWithoutButtons(note)
+                NoteCardWithRestoreButton(note, onRestore = {
+                    recentlyDeletedViewModel.restoreNote(note.noteId)
+                })
                 Spacer(modifier = Modifier.height(eightDp))
             }
         }
@@ -46,7 +49,7 @@ fun RecentlyDeleted(recentlyDeletedViewModel: RecentlyDeletedViewModel = hiltVie
 }
 
 @Composable
-fun NoteCardWithoutButtons(note: Note) {
+fun NoteCardWithRestoreButton(note: Note, onRestore: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -75,6 +78,20 @@ fun NoteCardWithoutButtons(note: Note) {
                 Text(
                     text = note.body,
                     style = MaterialTheme.typography.bodyMedium
+                )
+            }
+
+            Button(
+                onClick = { onRestore() },
+                shape = RoundedCornerShape(eightDp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Text(
+                    text = stringResource(R.string.restore),
+                    style = MaterialTheme.typography.titleMedium.copy(color = Grey80),
                 )
             }
         }

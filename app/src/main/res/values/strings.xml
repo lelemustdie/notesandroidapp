@@ -17,5 +17,6 @@
     <string name="maxuvindex">Índice Máximo de UV: %s</string>
     <string name="maxuvtime">Horario de Máximo índice UV: %s</string>
     <string name="nofavs">Aún no tienes notas favoritas.</string>
-    <string name="nodeleted"></string>
+    <string name="nodeleted">Aún no tienes notas eliminadas.</string>
+    <string name="restore">Restaurar</string>
 </resources>

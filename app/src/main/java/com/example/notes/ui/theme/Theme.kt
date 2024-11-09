@@ -14,13 +14,15 @@ import androidx.compose.ui.platform.LocalContext
 private val DarkColorScheme = darkColorScheme(
     primary = PrimaryPink,
     secondary = SecondaryPink,
-    tertiary = Grey40
+    tertiary = Grey80,
+    onSecondary = Grey80
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = PrimaryPink,
     secondary = SecondaryPink,
-    tertiary = Grey40
+    tertiary = Grey40,
+    onSecondary = Grey80
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -37,7 +39,7 @@ private val LightColorScheme = lightColorScheme(
 fun NotesTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {

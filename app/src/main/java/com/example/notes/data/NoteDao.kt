@@ -28,4 +28,7 @@ interface NoteDao {
 
     @Query("SELECT * FROM note WHERE deleted = 1")
     fun getRecentlyDeletedNotes(): LiveData<List<Note>>
+
+    @Query("UPDATE note SET deleted = 0 WHERE noteId = :noteId")
+    suspend fun restoreNote(noteId: Int)
 }

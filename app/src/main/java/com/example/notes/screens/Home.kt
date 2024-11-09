@@ -91,7 +91,7 @@ fun Home(onNavigate: (String) -> Unit , homeViewModel: HomeViewModel = hiltViewM
                     .height(IntrinsicSize.Min),
                 shape = RoundedCornerShape(sixteenDp),
                 colors = CardDefaults.cardColors(
-                    containerColor = SecondaryPink
+                    containerColor = MaterialTheme.colorScheme.secondary
                 )
             ) {
                 Column(
@@ -103,7 +103,7 @@ fun Home(onNavigate: (String) -> Unit , homeViewModel: HomeViewModel = hiltViewM
                     Text(
                         text = stringResource(id = R.string.uv_index),
                         style = MaterialTheme.typography.titleMedium.copy(
-                            color = PrimaryPink,
+                            color = MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.Bold
                         )
                     )
@@ -113,7 +113,7 @@ fun Home(onNavigate: (String) -> Unit , homeViewModel: HomeViewModel = hiltViewM
                     Text(
                         text = stringResource(id = R.string.maxuvindex, uvIndex.result.uv_max),
                         style = MaterialTheme.typography.bodyLarge.copy(
-                            color = Grey80
+                            color = MaterialTheme.colorScheme.tertiary
                         )
                     )
 
@@ -122,7 +122,7 @@ fun Home(onNavigate: (String) -> Unit , homeViewModel: HomeViewModel = hiltViewM
                     Text(
                         text = stringResource(R.string.maxuvtime, uvMaxTimeFormatted),
                         style = MaterialTheme.typography.bodyMedium.copy(
-                            color = Grey40
+                            color = MaterialTheme.colorScheme.tertiary
                         )
                     )
                 }
@@ -149,7 +149,6 @@ fun Home(onNavigate: (String) -> Unit , homeViewModel: HomeViewModel = hiltViewM
         }
     }
 }
-
 
 @Composable
 fun NoteCard(
