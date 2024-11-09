@@ -20,4 +20,5 @@
     <string name="nofavs">Aún no tienes notas favoritas.</string>
     <string name="nodeleted">Aún no tienes notas eliminadas.</string>
     <string name="restore">Restaurar</string>
+    <string name="close">Cerrrar</string>
 </resources>
