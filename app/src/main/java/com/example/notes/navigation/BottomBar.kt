@@ -8,7 +8,9 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.notes.R
 import com.example.notes.navigation.enums.Routes
 import com.example.notes.navigation.interfaces.TabItem
 
@@ -16,25 +18,28 @@ import com.example.notes.navigation.interfaces.TabItem
 fun BottomBar(
     onNavigate: (String) -> Unit
 ) {
-    val heroesTab = TabItem(
+    val favsTab = TabItem(
         title = Routes.Favorites.title,
         unselectedIcon = Icons.Outlined.FavoriteBorder,
-        selectedIcon = Icons.Filled.Favorite
+        selectedIcon = Icons.Filled.Favorite,
+        text = stringResource(R.string.favorites)
     )
 
-    val comicsTab = TabItem(
+    val homeTab = TabItem(
         title = Routes.Home.title,
         unselectedIcon = Icons.Outlined.Home,
-        selectedIcon = Icons.Filled.Home
+        selectedIcon = Icons.Filled.Home,
+        text = stringResource(R.string.home_page)
     )
 
-    val profileTab = TabItem(
+    val recentlyDeletedTab = TabItem(
         title = Routes.RecentlyDeleted.title,
         unselectedIcon = Icons.Outlined.Delete,
-        selectedIcon = Icons.Filled.Delete
+        selectedIcon = Icons.Filled.Delete,
+        text = stringResource(R.string.recently_deleted)
     )
 
-    val tabs = listOf(heroesTab, comicsTab, profileTab)
+    val tabs = listOf(favsTab, homeTab, recentlyDeletedTab)
 
     TabsView(tabs = tabs, onNavigate = onNavigate)
 }

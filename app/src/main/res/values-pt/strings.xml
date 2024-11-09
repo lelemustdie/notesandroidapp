@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name" translatable="false">notes</string>
+    <string name="error_message">ocorreu um erro</string>
+    <string name="description">ícone</string>
+    <string name="favorites">Favoritos</string>
+    <string name="notes">Notas</string>
+    <string name="note">Usar</string>
+    <string name="home_page">Começo</string>
+    <string name="content">Contente</string>
+    <string name="recently_deleted">Eliminados</string>
+    <string name="delete_note">Excluir nota</string>
+    <string name="mark_favorite">Marcar como favorito</string>
+    <string name="unmark_favorite">Desmarcar como favorito</string>
+    <string name="save_note">Guardar nota</string>
+    <string name="note_title">Título</string>
+    <string name="uv_index">Índice UV máximo hoje</string>
+    <string name="na" translatable="false">N/A</string>
+    <string name="maxuvindex">Índice UV máximo: %s</string>
+    <string name="maxuvtime">Programação máxima do índice UV: %s</string>
+    <string name="nofavs">Você ainda não tem notas favoritas.</string>
+    <string name="nodeleted">Você ainda não excluiu notas.</string>
+    <string name="restore">Restaurar</string>
+</resources>

@@ -6,4 +6,5 @@ data class TabItem(
     val title: String,
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector,
+    val text: String
 )

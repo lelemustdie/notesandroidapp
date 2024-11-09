@@ -31,7 +31,7 @@ fun TabsView(tabs: List<TabItem>, onNavigate: (String) -> Unit) {
                         description = tab.title
                     )
                 },
-                label = { Text(tab.title) },
+                label = { Text(tab.text) },
                 selected = index == selectedTabIndex,
                 onClick = {
                     selectedTabIndex = index
